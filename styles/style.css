@@ -1,0 +1,190 @@
+/* ==========================
+    VARIÁVEIS GLOBAIS 
+   ========================== */
+   :root {
+    --primary-color: #f5e1d5;
+    --secondary-color: #ff5733; 
+    --text-color: #333;
+    --bg-light: #ffffff;
+    --bg-dark: #f8f8f8;
+}
+
+/* ==========================
+    RESET
+   ========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==========================
+    TIPOGRAFIA 
+   ========================== */
+body {
+    font-family: "Roboto Serif", serif;
+    font-size: 16px;
+    color: var(--text-color);
+    background-color: var(--bg-light);
+}
+
+/*  Títulos */
+h1 {
+    font-size: 48px;
+    font-weight: 800;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* ==========================
+   FAIXA DE NOTIFICAÇÃO 
+   ========================== */
+.top-banner {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+    font-size: 15px;
+    padding: 10px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+}
+
+.top-banner p {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* ==========================
+    NAVBAR 
+   ========================== */
+
+   .navbar {
+    display: flex;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: var(--bg-light);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 40px; 
+    left: 0;
+    z-index: 1000;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.logo img {
+    max-height: 50px; 
+    height: auto;
+}
+
+/* Navegação Centralizada */
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-grow: 2; 
+    gap: 30px;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 18px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: var(--secondary-color);
+}
+
+/* Ícones e botão de compra */
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 1; 
+    justify-content: flex-end;
+}
+
+/* Botão "Compre agora" */
+.cta-button {
+    background-color: #a8d5d8; 
+    color: #fafafa;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+    background-color: #91c3c6;
+    transform: scale(1.05);
+}
+
+
+/* ==========================
+   RESPONSIVIDADE 
+   ========================== */
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: white;
+        width: 200px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+}
