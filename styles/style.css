@@ -1,26 +1,26 @@
-/* ==========================
-    VARIÁVEIS GLOBAIS 
-   ========================== */
+/* ======================================
+    VARIÁVEIS GLOBAIS
+   ====================================== */
    :root {
     --primary-color: #f5e1d5;
-    --secondary-color: #ff5733; 
+    --secondary-color: #ff5733;
     --text-color: #333;
     --bg-light: #ffffff;
     --bg-dark: #f8f8f8;
 }
 
-/* ==========================
+/* ======================================
     RESET
-   ========================== */
+   ====================================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ==========================
-    TIPOGRAFIA 
-   ========================== */
+/* ======================================
+    TIPOGRAFIA
+   ====================================== */
 body {
     font-family: "Roboto Serif", serif;
     font-size: 16px;
@@ -28,32 +28,15 @@ body {
     background-color: var(--bg-light);
 }
 
-/*  Títulos */
-h1 {
-    font-size: 48px;
-    font-weight: 800;
-}
+h1 { font-size: 48px; font-weight: 800; }
+h2 { font-size: 40px; font-weight: 700; }
+h3 { font-size: 22px; font-weight: 600; }
+p  { font-size: 16px; font-weight: 400; }
 
-h2 {
-    font-size: 40px;
-    font-weight: 700;
-}
-
-h3 {
-    font-size: 22px;
-    font-weight: 600;
-}
-
-p {
-    font-size: 16px;
-    font-weight: 400;
-}
-
-/* ==========================
-   FAIXA DE NOTIFICAÇÃO 
-   ========================== */
+/* ======================================
+    FAIXA DE NOTIFICAÇÃO
+   ====================================== */
 .top-banner {
-    width: 100%;
     background-color: var(--primary-color);
     color: var(--text-color);
     text-align: center;
@@ -61,11 +44,9 @@ p {
     padding: 10px 5px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    font-weight: bold;
     position: fixed;
+    width: 100%;
     top: 0;
-    left: 0;
     z-index: 2000;
 }
 
@@ -75,24 +56,21 @@ p {
     justify-content: space-around;
 }
 
-/* ==========================
-    NAVBAR 
-   ========================== */
-
+/* ======================================
+    NAVBAR
+   ====================================== */
    .navbar {
     display: flex;
     align-items: center;
-    padding: 15px 40px;
+    padding: 18px 40px;
     background-color: var(--bg-light);
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
     position: fixed;
     width: 100%;
-    top: 40px; 
-    left: 0;
+    top: 36px;
     z-index: 1000;
 }
 
-/* Logo */
 .logo {
     display: flex;
     align-items: center;
@@ -100,21 +78,15 @@ p {
 }
 
 .logo img {
-    max-height: 50px; 
-    height: auto;
+    max-height: 50px;
 }
 
-/* Navegação Centralizada */
 .nav-links {
     list-style: none;
     display: flex;
     justify-content: center;
-    flex-grow: 2; 
+    flex-grow: 2;
     gap: 30px;
-}
-
-.nav-links li {
-    display: inline-block;
 }
 
 .nav-links li a {
@@ -129,25 +101,21 @@ p {
     color: var(--secondary-color);
 }
 
-/* Ícones e botão de compra */
 .nav-icons {
     display: flex;
     align-items: center;
     gap: 15px;
-    flex: 1; 
+    flex: 1;
     justify-content: flex-end;
 }
 
-/* Botão "Compre agora" */
 .cta-button {
-    background-color: #a8d5d8; 
+    background-color: #a8d5d8;
     color: #fafafa;
-    font-size: 16px;
-    font-weight: 600;
     padding: 10px 20px;
     border-radius: 20px;
     text-decoration: none;
-    transition: background 0.3s ease, transform 0.2s ease;
+    transition: 0.3s;
 }
 
 .cta-button:hover {
@@ -155,16 +123,83 @@ p {
     transform: scale(1.05);
 }
 
+/* ======================================
+    HERO SECTION
+   ====================================== */
+.hero {
+    position: relative;
+    width: 100%;
+    margin-top: 120px; /* navbar + top banner */
+    background-color: #F7F2EC;
+}
 
-/* ==========================
-   RESPONSIVIDADE 
-   ========================== */
-.menu-btn {
-    display: none;
-    background: none;
-    border: none;
+.hero-text {
+    position: absolute;
+    top: 0; /* Ajuste fino para ficar logo abaixo do navbar */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    font-family: "Roboto Serif", serif;
+    font-weight: 500;
     font-size: 24px;
-    cursor: pointer;
+    line-height: 120%;
+    letter-spacing: 0;
+    border-radius: 0px 0px 60px 60px; /* Apenas a parte inferior arredondada */
+    border: 3px solid #BAA370; /* Borda dourada */
+    background: #fefefe; 
+    box-shadow: 0px 4px 56px 0px rgba(0, 0, 0, 0.25); /* Efeito de sombra */
+    padding: 15px 20px;
+    color: black;
+    max-width: 80%; /* Para garantir que ele não fique muito grande */
+    text-align: center;
+    z-index: 10; /* Mantém sobre a imagem, mas abaixo da navbar */
+}
+
+/* Ajustes para o texto dentro do hero-text */
+.hero-text span {
+    padding: 0 10px;
+}
+
+
+/* Para garantir que a imagem do banner não seja sobreposta */
+.hero-image-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 120px; /* Mantém o espaçamento correto abaixo da navbar */
+    overflow: hidden; /* Evita que partes cortadas da imagem causem desalinhamento */
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain; /* Mantém a proporção correta sem cortar partes importantes */
+    max-height: 550px; /* Define um limite para evitar imagens muito grandes */
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 1024px) {
+    .hero-image {
+        max-height: 450px; /* Reduz o tamanho do banner para tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-image {
+        max-height: 350px; /* Ajusta melhor para dispositivos móveis */
+    }
+}
+/* ======================================
+    RESPONSIVIDADE
+   ====================================== */
+.menu-btn { display: none; }
+
+@media (max-width: 1024px) {
+    .hero-text,
+    .highlight-white,
+    .highlight-brown { font-size: 20px; padding: 10px 15px; }
 }
 
 @media (max-width: 768px) {
@@ -176,15 +211,148 @@ p {
         right: 0;
         background: white;
         width: 200px;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         padding: 10px;
     }
 
-    .nav-links.active {
-        display: flex;
+    .nav-links.active { display: flex; }
+    .menu-btn { display: block; }
+
+    .hero { margin-top: 100px; }
+    .hero-text,
+    .highlight-white,
+    .highlight-brown { font-size: 18px; padding: 8px 12px; }
+}
+
+/* ========================== */
+/* SEÇÃO DE COLEÇÕES EM DESTAQUE */
+/* ========================== */
+
+.collections {
+    width: 100%;
+    padding: 50px 0;
+    background-color: #F7F2EC;
+    text-align: center;
+}
+
+/* Título da seção */
+.section-title {
+    font-family: "Roboto Serif", serif;
+    font-size: 48px; /* Tamanho da fonte */
+    font-weight: 600; /* SemiBold */
+    line-height: 120%; /* Espaçamento entre linhas */
+    letter-spacing: 0; /* Sem espaçamento extra */
+    text-align: center; /* Centralizado */
+    color: #29180F; /* Mantendo a cor padrão */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+/* ==========================
+    LEGENDA DA SEÇÃO COLEÇÕES
+   ========================== */
+   .section-subtitle {
+    font-family: "Roboto Serif", serif;
+    font-size: 18px;
+    font-weight: 400; /* Regular */
+    line-height: 140%;
+    text-align: center;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto 5px auto; /* Centraliza e adiciona margem inferior */
+    margin-bottom: 40px;
+}
+
+/* ==========================
+    GRID DE COLEÇÕES
+   ========================== */
+.collections-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Permite ajuste dinâmico para responsividade */
+}
+
+/* ==========================
+    ITEM DA COLEÇÃO
+   ========================== */
+.collection-item {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.collection-item:hover {
+    transform: scale(1.05);
+}
+
+/* ==========================
+    IMAGEM DA COLEÇÃO
+   ========================== */
+.collection-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+/* ==========================
+    CONTEÚDO DA COLEÇÃO
+   ========================== */
+.collection-content {
+    padding: 15px;
+    text-align: center;
+    background-color: white;
+}
+
+/* Nome da coleção */
+.collection-content h3 {
+    font-family: "Roboto Serif", serif;
+    font-weight: 800; /* SemiBold */
+    font-size: 18px;
+    line-height: 120%;
+    color: #000000;
+}
+
+/* Descrição da coleção */
+.collection-content p {
+    font-family: "Roboto Serif", serif;
+    font-weight: 400; /* Regular */
+    font-size: 16px;
+    line-height: 150%;
+    color: rgba(0, 0, 0, 0.9);
+    margin-top: 5px;
+}
+
+/* ==========================
+    RESPONSIVIDADE
+   ========================== */
+@media (max-width: 1024px) {
+    .collection-item {
+        flex: 1 1 250px; /* Mantém um tamanho mínimo e ajustável */
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 28px;
     }
 
-    .menu-btn {
-        display: block;
+    .collections-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .collection-item {
+        width: 90%;
+        max-width: 400px;
     }
 }
