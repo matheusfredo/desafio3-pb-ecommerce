@@ -174,70 +174,109 @@
     transform: scale(1.05);
   }
   
-
-/* ======================================
-    HERO SECTION
-   ====================================== */
-   .hero {
+/* ====================================== */
+/* HERO SECTION */
+/* ====================================== */
+.hero {
     position: relative;
     width: 100%;
     margin-top: 120px;
     background-color: var(--background-secondary);
-  }
-  
-  .hero-text {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    align-items: center;
-    font-family: var(--font-primary);
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 120%;
-    border-radius: 0 0 60px 60px;
-    border: 3px solid var(--border-color);
-    background: var(--bg-light);
-    box-shadow: var(--shadow-lg);
-    padding: 15px 20px;
-    color: var(--text-color);
-    max-width: 80%;
-    text-align: center;
-    z-index: 10;
-  }
-  
-  .hero-text span {
-    padding: 0 10px;
-  }
-  
-  .hero-image-container {
+}
+
+.hero-image-container {
     position: relative;
     width: 100%;
     height: auto;
     margin-top: 120px;
     overflow: hidden;
-  }
-  
-  .hero-image {
+}
+
+.hero-image {
     width: 100%;
     height: auto;
     display: block;
     object-fit: contain;
     max-height: 550px;
-  }
-  
-  @media (max-width: 1024px) {
-    .hero-image {
-      max-height: 450px;
+}
+
+.hero-text-wrapper {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    max-width: 100vw;
+    width: calc(100% - 32px);
+    font-size: 24px;
+    padding: 0 16px;
+}
+
+.hero-text {
+    display: flex;
+    align-items: center;
+    font-family: var(--font-main);
+    font-weight: 500;
+    line-height: 120%;
+    text-align: center;
+}
+
+/*  Estilização do Desconto */
+.highlight-white {
+    z-index: 1;
+    border-radius: 0px 0px 0px 60px;
+    border: 3px solid var(--border-color);
+    box-shadow: var(--shadow);
+    background-color: var(--bg-light);
+    padding: 24px 42px;
+    padding-right: 88px;
+    font-weight: 500;
+}
+
+.highlight-brown {
+    z-index: 2;
+    border-radius: 0px 0px 60px 60px;
+    border: 3px solid var(--border-color);
+    background: #BF8B70;
+    box-shadow: var(--shadow);
+    color: var(--bg-light);
+    padding: 24px 42px;
+    margin-left: -88px;
+    font-weight: 500;
+}
+
+/* Responsividade */
+@media (max-width: 990px) {
+    .hero-text-wrapper {
+        font-size: 18px;
     }
-  }
-  
-  @media (max-width: 768px) {
-    .hero-image {
-      max-height: 350px;
+}
+
+@media (max-width: 800px) {
+    .hero-text-wrapper {
+        font-size: 14px;
     }
-  }
+}
+
+@media (max-width: 550px) {
+    .hero-text-wrapper {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero-image {
+        max-height: 450px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-image {
+        max-height: 350px;
+    }
+}
+
 
 /* ========================== 
     SEÇÃO DE COLEÇÕES EM DESTAQUE 
@@ -341,7 +380,7 @@
 
 
 /* ==========================
-   TÍTULO "ACQUISTA PER LA PRIMAVERA"
+   TÍTULOS
    ========================== */
    .spring-title {
     display: flex;
@@ -374,6 +413,28 @@
     text-align: center;
 }
 
+/* ========================== */
+/* WRAPPER PARA TÍTULO COM FUNDO DIVIDIDO */
+/* ========================== */
+.spring-title-wrapper {
+    position: relative;
+    width: 100%;
+    height: 80px; 
+    background: linear-gradient(to bottom, #DFEDE8 50%, #F7F2EC 50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spring-title-wrapper-inverted {
+    position: relative;
+    width: 100%;
+    height: 80px; 
+    background: linear-gradient(to bottom, #F7F2EC 50%, #DFEDE8 50%); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 /* ==========================
    GRID DE PRODUTOS
@@ -391,7 +452,7 @@
    CARD DO PRODUTO
    ========================== */
    .product-card {
-    background: var(--bg-dark);
+    background: #F7F2EC;
     border-radius: 20px;
     box-shadow: var(--shadow);
     width: 280px;
@@ -489,7 +550,9 @@ width: 100%;
     box-shadow: var(--shadow);
     cursor: pointer;
     transition: background 0.3s ease, transform 0.2s ease;
-    margin: 30px 0;
+    margin-top: 15px;
+    margin-bottom: 45px;
+    ;
 }
 
 
@@ -624,10 +687,20 @@ width: 100%;
 }
 
 .novita-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 36px;
     font-weight: 700;
     color: var(--text-color);
+    text-align: center;
     margin-bottom: 40px;
+    gap: 10px;
+}
+
+.novita-icon {
+    width: 32px;
+    height: auto;
 }
 
 /* Estrutura do Grid */
@@ -687,7 +760,6 @@ width: 100%;
     height: 100%;
     object-fit: cover;
     border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
 }
 
 /* Conteúdo dos Cards */
@@ -739,5 +811,317 @@ width: 100%;
         width: 100%;
         height: auto;
         border-radius: 20px 20px 0 0;
+    }
+}
+
+/* ========================== */
+/* SEÇÃO "OPINIÕES DOS CLIENTES" */
+/* ========================== */
+.opinions {
+    background-color: #E1EDE9;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+/* Título da Seção */
+.opinions-title {
+    margin-bottom: 50px;
+}
+
+/* Grid de Opiniões */
+.opinions-grid {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 60px;
+    overflow: visible;
+}
+
+/* Cards de Opiniões */
+.opinions-card {
+    background: var(--bg-light);
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    border: 2px solid var(--border-color);
+    width: 350px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 220px; /* Ajusta para manter o layout fixo */
+}
+
+/* Comentário no Topo */
+.opinions-comment {
+    font-size: 16px;
+    font-style: italic;
+    color: var(--text-color);
+    padding: 5px;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Rodapé do Card */
+.opinions-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+
+/* Ícone do Usuário (Letra Inicial) */
+.opinions-user-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--border-color);
+    background-color: var(--bg-light);
+    color: var(--text-color);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+/* Nome do Cliente e Cidade */
+.opinions-user-info {
+    text-align: left;
+}
+
+.opinions-user-info h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.opinions-user-info span {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Efeito Hover */
+.opinions-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .opinions-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .opinions-card {
+        width: 90%;
+        max-width: 350px;
+    }
+}
+
+/* ========================== */
+/* FOOTER */
+/* ========================== */
+.footer {
+    background-color: #F0DACD;
+    color: var(--text-color);
+    padding: 50px 20px;
+    font-size: 16px;
+}
+
+/* NEWSLETTER */
+.footer-newsletter {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+/* Texto da Newsletter */
+.footer-newsletter-text {
+    max-width: 500px;
+}
+
+.footer-newsletter h2 {
+    font-size:36px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.footer-newsletter p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+/* Formulário de Newsletter */
+.newsletter-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.newsletter-form input {
+    padding: 12px;
+    border: 1px solid black;
+    font-size: 16px;
+    width: 280px;
+    text-align: left;
+}
+
+.newsletter-form button {
+    background: #BF8B70;
+    color: var(--bg-light);
+    padding: 12px 20px;
+    border: 1px solid black;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    background: #C95A3B;
+}
+
+.footer-newsletter small {
+    font-size: 12px;
+    color:var(--text-color);
+    text-align: right;
+    display: block;
+    margin-top: 10px;
+    text-decoration: underline;
+}
+
+.footer-newsletter small:hover {
+    color: var(--secondary-color);
+}
+
+/* LINHA DIVISÓRIA */
+.footer-divider {
+    width: 95%;
+    height: 6px;
+    background: #C9B079;
+    margin: 30px auto;
+}
+
+/* LINKS DO FOOTER */
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1300px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 0 20px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 180px;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 14px;
+    font-weight: 200;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: var(--secondary-color);
+}
+
+/* RODAPÉ INFERIOR */
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribui os itens para os cantos */
+    padding: 15px 20px; /* Adiciona espaçamento lateral */
+    font-size: 14px;
+    background-color: var(--bg-light);
+    max-width: 100%;
+    height: 112px;
+}
+
+/* Logo do rodapé */
+.footer-bottom img {
+    width: 100px;
+    margin-left: 20px;
+}
+
+/* Texto de direitos autorais */
+.footer-bottom p {
+    font-size: 16px;
+    color: var(--text-color);
+    margin-right: 20px;
+}
+
+
+/* RESPONSIVIDADE */
+@media (max-width: 1024px) {
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .footer-column {
+        min-width: 250px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .newsletter-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .newsletter-form input {
+        width: 100%;
+        text-align: center;
+    }
+
+    .newsletter-form button {
+        width: 100%;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 }
