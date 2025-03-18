@@ -3,18 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div class="top-banner">
         <p>
-            <span>Você precisa de ajuda?</span>
-            <span>Ganhe 10% de desconto agora: inscreva-se na newsletter</span>
-            <span>Informações de entrega</span>
+            <a href="#" class="top-banner-link">Você precisa de ajuda?</a>
+            <a href="#" class="top-banner-link">Ganhe 10% de desconto agora: inscreva-se na newsletter</a>
+            <a href="#" class="top-banner-link">Informações de entrega</a>
         </p>
     </div>
-
+    
     <header>
         <nav class="navbar">
             <div class="logo">
@@ -29,7 +32,6 @@
                 <li><a href="#">Quem Somos</a></li>
             </ul>
             <div class="nav-icons">
-                <button id="menu-toggle" class="menu-btn">☰</button>
                 <a href="#"><img src="assets/icons/search.svg" alt="Buscar"></a>
                 <a href="#"><img src="assets/icons/user.svg" alt="perfil"></a>
                 <a href="#"><img src="assets/icons/heart.svg" alt="salvos"></a>
@@ -138,38 +140,64 @@
             O Que Podemos Fazer Por Você
             <img src="assets/icons/flower.svg" alt="Flor" class="flower-icon">
         </h2>
-
-        <div class="slider-container">
-            <div class="slider">
-                <div class="slide active">
-                    <div class="caratteristiche-grid">
-                        <div class="caratteristiche-card">
-                            <div class="caratteristiche-icon">
-                                <img src="assets/icons/delivery.svg" alt="Entrega Segura">
-                            </div>
-                            <h3>Entrega Segura</h3>
-                            <p>Oferecemos entregas rápidas para garantir que seu pelúcia chegue em perfeitas condições.</p>
-                        </div>
     
-                        <div class="caratteristiche-card">
-                            <div class="caratteristiche-icon">
-                                <img src="assets/icons/quality.svg" alt="Materiais de Qualidade">
-                            </div>
-                            <h3>Materiais de Qualidade</h3>
-                            <p>Utilizamos materiais de alta qualidade para garantir um produto durável e aconchegante.</p>
+        <div class="carousel">
+            <div class="carousel-track">
+                <div class="carousel-slide">
+                    <div class="caratteristiche-card">
+                        <div class="caratteristiche-icon">
+                            <img src="assets/icons/delivery.svg" alt="Entrega Segura">
                         </div>
-    
-                        <div class="caratteristiche-card">
-                            <div class="caratteristiche-icon">
-                                <img src="assets/icons/service.svg" alt="Atendimento Excelente">
-                            </div>
-                            <h3>Atendimento Excelente</h3>
-                            <p>Nossa equipe está sempre disponível para responder suas dúvidas e ajudar no que for preciso.</p>
+                        <h3>Entrega Segura</h3>
+                        <p>Oferecemos entregas rápidas para garantir que seu pelúcia chegue em perfeitas condições.</p>
+                    </div>
+                    <div class="caratteristiche-card">
+                        <div class="caratteristiche-icon">
+                            <img src="assets/icons/quality.svg" alt="Materiais de Qualidade">
                         </div>
+                        <h3>Materiais de Qualidade</h3>
+                        <p>Utilizamos materiais de alta qualidade para garantir um produto durável e aconchegante.</p>
+                    </div>
+                    <div class="caratteristiche-card">
+                        <div class="caratteristiche-icon">
+                            <img src="assets/icons/service.svg" alt="Atendimento Excelente">
+                        </div>
+                        <h3>Atendimento Excelente</h3>
+                        <p>Nossa equipe está sempre disponível para responder suas dúvidas e ajudar no que for preciso.</p>
                     </div>
                 </div>
+        
+                <div class="carousel-slide">
+                    <div class="caratteristiche-card">
+                        <div class="caratteristiche-icon">
+                            <img src="assets/icons/quality.svg" alt="Sustentabilidade">
+                        </div>
+                        <h3>Sustentabilidade</h3>
+                        <p>Nossos produtos são feitos com materiais ecológicos para preservar o meio ambiente.</p>
+                    </div>
+                    <div class="caratteristiche-card">
+                        <div class="caratteristiche-icon">
+                            <img src="assets/icons/quality.svg" alt="Personalização">
+                        </div>
+                        <h3>Personalização</h3>
+                        <p>Oferecemos a possibilidade de personalizar seus pelúcias para torná-los únicos.</p>
+                    </div>
+                    <div class="caratteristiche-card">
+                        <div class="caratteristiche-icon">
+                            <img src="assets/icons/quality.svg" alt="Presentes Especiais">
+                        </div>
+                        <h3>Presentes Especiais</h3>
+                        <p>Os melhores presentes para todas as idades, feitos com carinho e qualidade.</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="carousel-dots"></div>
         </div>
+            
     </section>
+    
+    
 
     <div class="spring-title-wrapper">
         <div class="spring-title">
@@ -276,71 +304,104 @@
     </div>
 
     <section class="opinions">
-
     
-    <div class="opinions-grid">
-        <!-- Card 1 -->
-        <div class="opinions-card">
-            <p class="opinions-comment">"Produto incrível! A qualidade é excelente e a entrega foi super rápida!"</p>
-            <div class="opinions-footer">
-                <div class="opinions-user-icon">A</div>
-                <div class="opinions-user-info">
-                    <h3>Alessandra Rossi</h3>
-                    <span>Roma, Italia</span>
+        <div class="opinions-carousel">
+            <div class="opinions-track">
+                <div class="opinions-slide">
+                    <div class="opinions-card">
+                        <p class="opinions-comment">"Produto incrível! A qualidade é excelente e a entrega foi super rápida!"</p>
+                        <div class="opinions-footer">
+                            <div class="opinions-user-icon">A</div>
+                            <div class="opinions-user-info">
+                                <h3>Alessandra Rossi</h3>
+                                <span>Roma, Itália</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="opinions-card">
+                        <p class="opinions-comment">"Adorei a experiência de compra, com certeza voltarei para comprar novamente!"</p>
+                        <div class="opinions-footer">
+                            <div class="opinions-user-icon">M</div>
+                            <div class="opinions-user-info">
+                                <h3>Marco Bianchi</h3>
+                                <span>Milano, Itália</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="opinions-card">
+                        <p class="opinions-comment">"Serviço impecável! Recomendo para quem procura qualidade."</p>
+                        <div class="opinions-footer">
+                            <div class="opinions-user-icon">E</div>
+                            <div class="opinions-user-info">
+                                <h3>Elena Verdi</h3>
+                                <span>Firenze, Itália</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="opinions-slide">
+                    <div class="opinions-card">
+                        <p class="opinions-comment">"Ótimo atendimento! Me ajudaram a escolher o presente perfeito."</p>
+                        <div class="opinions-footer">
+                            <div class="opinions-user-icon">C</div>
+                            <div class="opinions-user-info">
+                                <h3>Carlos Mendes</h3>
+                                <span>Lisboa, Portugal</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="opinions-card">
+                        <p class="opinions-comment">"Fiquei impressionado com a qualidade do produto. Super recomendo!"</p>
+                        <div class="opinions-footer">
+                            <div class="opinions-user-icon">L</div>
+                            <div class="opinions-user-info">
+                                <h3>Luana Ferreira</h3>
+                                <span>São Paulo, Brasil</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="opinions-card">
+                        <p class="opinions-comment">"Adorei! Foi a melhor compra que já fiz, atendimento excelente."</p>
+                        <div class="opinions-footer">
+                            <div class="opinions-user-icon">B</div>
+                            <div class="opinions-user-info">
+                                <h3>Bruno Almeida</h3>
+                                <span>Madrid, Espanha</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-
-        <!-- Card 2 -->
-        <div class="opinions-card">
-            <p class="opinions-comment">"Adorei a experiência de compra, com certeza voltarei para comprar novamente!"</p>
-            <div class="opinions-footer">
-                <div class="opinions-user-icon">M</div>
-                <div class="opinions-user-info">
-                    <h3>Marco Bianchi</h3>
-                    <span>Milano, Italia</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="opinions-card">
-            <p class="opinions-comment">"Serviço impecável! Recomendo para quem procura qualidade."</p>
-            <div class="opinions-footer">
-                <div class="opinions-user-icon">E</div>
-                <div class="opinions-user-info">
-                    <h3>Elena Verdi</h3>
-                    <span>Firenze, Italia</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+        <div class="opinions-dots"></div>
+    </section>
+    
+    
 
 <footer class="footer">
-    <!-- Newsletter -->
     <div class="footer-newsletter">
-        <!-- Texto da Newsletter -->
         <div class="footer-newsletter-text">
             <h2>TeddyShop Newsletter</h2>
             <p>Fique atualizado com as últimas novidades, promoções e ofertas especiais.</p>
         </div>
-    
-        <!-- Formulário de Inscrição -->
-        <div class="newsletter-container">
-            <div class="newsletter-form">
-                <input type="email" placeholder="Insira seu e-mail">
-                <button>Inscreva-se agora</button>
-            </div>
-            <small  href="#">Ao se inscrever você aceita nossa Política de Privacidade </small>
-        </div>
-    </div>
-    
-    <!-- Linha divisória -->
-    <div class="footer-divider"></div>
-    
+<div id="email-message-container"></div>
 
-    <!-- Links principais -->
+<div class="newsletter-container">
+    <form id="emailForm" class="newsletter-form" novalidate>
+        <input type="text" id="email-input" placeholder="Insira seu e-mail">
+        <button type="submit">Inscreva-se agora</button>
+    </form>
+    <small>Ao se inscrever você aceita nossa <a href="#">Política de Privacidade</a></small>
+</div>
+
+    </div>
+
+    <div class="footer-divider"></div>
     <div class="footer-links">
         <div class="footer-column">
             <h3>Para ajudar</h3>
@@ -404,6 +465,8 @@
         <p>© 2025 TeddyShop. Todos os direitos reservados.</p>
     </div>
 </section>
+
+<script src="scripts/main.js" defer></script>
 
 </body>
 

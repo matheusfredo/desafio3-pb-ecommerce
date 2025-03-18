@@ -1,0 +1,22 @@
+.highlight-white {
+    z-index: 1;
+    border-radius: 0px 0px 0px 60px;
+    border: 3px solid var(--border-color);
+    box-shadow: var(--shadow);
+    background-color: var(--bg-light);
+    padding: 24px 42px;
+    padding-right: 88px;
+    font-weight: 500;
+}
+
+.highlight-brown {
+    z-index: 2;
+    border-radius: 0px 0px 60px 60px;
+    border: 3px solid var(--border-color);
+    background: #BF8B70;
+    box-shadow: var(--shadow);
+    color: var(--bg-light);
+    padding: 24px 42px;
+    margin-left: -88px;
+    font-weight: 500;
+}

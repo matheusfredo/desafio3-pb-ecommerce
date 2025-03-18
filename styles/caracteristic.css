@@ -1,0 +1,64 @@
+/* ========================== */
+/* SEÇÃO "CARATTERISTICHE" */
+/* ========================== */
+.caratteristiche {
+    background-color: #E1EDE9;
+    text-align: center;
+    padding: 80px 20px;
+    position: relative;
+}
+
+/* Título */
+.caratteristiche-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Estilos dos cards */
+.caratteristiche-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 2px solid #ddd;
+    width: 350px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.caratteristiche-icon img {
+    width: 50px;
+    margin-bottom: 15px;
+}
+
+.caratteristiche-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.caratteristiche-card p {
+    font-size: 16px;
+    color: #666;
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .carousel-slide {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .caratteristiche-card {
+        width: 90%;
+        max-width: 350px;
+    }
+}

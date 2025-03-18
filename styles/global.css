@@ -1,0 +1,11 @@
+:root {
+    --primary-color: #f5e1d5;
+    --secondary-color: #ff5733;
+    --text-color: #29180F;
+    --bg-light: #ffffff;
+    --bg-dark: #f8f8f8;
+    --border-color: #BAA370;
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --font-main: "Roboto Serif", serif;
+    --shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}

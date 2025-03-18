@@ -1,0 +1,33 @@
+.top-banner {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+    font-size: 15px;
+    padding: 10px 5px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 2000;
+}
+
+.top-banner p {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0;
+}
+
+.top-banner-link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.top-banner-link:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}

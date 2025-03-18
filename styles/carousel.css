@@ -1,0 +1,40 @@
+/* Estilos gerais do carrossel */
+.carousel {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    display: flex;
+    justify-content: space-between;
+    min-width: 100%;
+    gap: 20px;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.carousel-dots button {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    border-radius: 50%;
+    border: none;
+    background-color: #C9B079;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.carousel-dots button.active {
+    background-color: #BF8B70;
+}

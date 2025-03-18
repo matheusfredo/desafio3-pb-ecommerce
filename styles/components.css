@@ -1,0 +1,196 @@
+.card-base {
+    background: var(--bg-light);
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px var(--shadow-light);
+    border: 2px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-base:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button {
+    background-color: #89D3D1;
+    color: var(--bg-light);
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #89D3D1;
+    transform: scale(1.05);
+}
+
+.explore-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    width: 100%;
+    }
+    
+    .explore-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #BF8B70;
+        color: var(--bg-light);
+        font-size: 18px;
+        font-weight: 600;
+        padding: 12px 24px;
+        border-radius: 30px;
+        border: 2px solid var(--bg-light);
+        box-shadow: var(--shadow);
+        cursor: pointer;
+        transition: background 0.3s ease, transform 0.2s ease;
+        margin-top: 15px;
+        margin-bottom: 45px;
+        ;
+    }
+    
+    .explore-btn:hover {
+        background-color: #9E6F50;
+        transform: scale(1.05);
+    }
+    
+
+   .spring-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-light);
+    border: 3px solid var(--border-color);
+    border-radius: 40px; 
+    box-shadow: var(--shadow);
+    padding: 12px 20px;
+    min-width: 200px;
+    max-width: fit-content;
+    margin: 30px auto;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.spring-icon {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.spring-text {
+    font-size: 28px;
+    font-weight: 600;
+    font-style: italic;
+    line-height: 120%;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.spring-title-wrapper {
+    position: relative;
+    width: 100%;
+    height: 80px; 
+    background: linear-gradient(to bottom, #DFEDE8 50%, #F7F2EC 50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spring-title-wrapper-inverted {
+    position: relative;
+    width: 100%;
+    height: 80px; 
+    background: linear-gradient(to bottom, #F7F2EC 50%, #DFEDE8 50%); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-title {
+    font-size: 48px; 
+    font-weight: 600; 
+    line-height: 120%; 
+    text-align: center; 
+    color: var(--text-color);
+    margin-bottom: 20px; 
+}
+
+
+   .section-subtitle {
+    font-size: 18px;
+    font-weight: 400; 
+    line-height: 140%;
+    text-align: center;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto 40px auto; 
+}
+
+.success-message {
+    background-color: green !important;
+}
+
+    /* ==========================
+       RESPONSIVIDADE
+       ========================== */
+    @media (max-width: 1024px) {
+        .product-grid {
+            flex-wrap: wrap;
+        }
+    
+        .product-card {
+            width: 220px;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .spring-title {
+            font-size: 28px;
+            padding: 10px 20px;
+        }
+    
+        .product-card {
+            width: 90%;
+            max-width: 300px;
+        }
+    
+        .explore-btn {
+            width: 90%;
+            max-width: 300px;
+        }
+    }
+
+
+   
+
+    
+#email-message-container {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: none;
+    z-index: 3000;
+    text-align: center;
+    width: fit-content;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#email-input {
+    padding: 12px;
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 16px;
+    width: 280px;
+    text-align: left;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
