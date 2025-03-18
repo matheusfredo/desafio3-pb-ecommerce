@@ -58,3 +58,36 @@
     color: rgba(0, 0, 0, 0.9);
     margin-top: 5px;
 }
+
+@media (max-width: 768px) {
+    .collections {
+        padding: 30px 10px; /* Reduz espaçamento lateral */
+    }
+
+    .collections-grid {
+        flex-direction: column; /* Organiza os cards em coluna */
+        align-items: center; /* Centraliza os cards */
+        gap: 15px; /* Reduz espaço entre os itens */
+    }
+
+    .collection-item {
+        width: 90%; /* Garante que os cards ocupem boa parte da tela */
+        max-width: 350px;
+    }
+
+    .collection-item img {
+        height: 250px; /* Reduz altura da imagem no mobile */
+    }
+
+    .collection-content {
+        padding: 12px;
+    }
+
+    .collection-content h3 {
+        font-size: 16px; /* Reduz fonte para melhor encaixe */
+    }
+
+    .collection-content p {
+        font-size: 14px;
+    }
+}

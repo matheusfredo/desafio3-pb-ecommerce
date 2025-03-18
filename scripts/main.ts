@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
     setupEmailValidation();
     initializeCarousel(".carousel-track", ".carousel-slide", ".carousel-dots");
     initializeCarousel(".opinions-track", ".opinions-slide", ".opinions-dots");
+    setupMenuToggle();
 });
-
 
 function preventAnchorJump(): void {
     document.querySelectorAll<HTMLAnchorElement>("a").forEach(link => {
@@ -48,7 +48,6 @@ function validateEmail(emailInput: HTMLInputElement, messageContainer: HTMLDivEl
     }
 }
 
-
 function showMessage(container: HTMLDivElement, message: string, className: string): void {
     container.textContent = message;
     container.classList.add(className);
@@ -60,9 +59,10 @@ function showMessage(container: HTMLDivElement, message: string, className: stri
 }
 
 /**
- * @param trackSelector 
- * @param slideSelector 
- * @param dotsSelector 
+ * Inicializa um carrossel automático
+ * @param trackSelector Seletor do track principal do carrossel
+ * @param slideSelector Seletor de cada slide do carrossel
+ * @param dotsSelector Seletor do container dos pontos indicadores
  */
 function initializeCarousel(trackSelector: string, slideSelector: string, dotsSelector: string): void {
     const track = document.querySelector(trackSelector) as HTMLElement | null;
@@ -86,7 +86,7 @@ function initializeCarousel(trackSelector: string, slideSelector: string, dotsSe
 
         dotsContainer.appendChild(dot);
     });
-    
+
     setInterval(() => {
         currentIndex = (currentIndex + 1) % totalSlides;
         updateCarousel(track, dotsContainer, totalSlides, currentIndex);
@@ -102,4 +102,15 @@ function updateCarousel(track: HTMLElement, dotsContainer: HTMLElement, totalSli
     dots.forEach((dot, index) => {
         dot.classList.toggle("active", index === currentIndex);
     });
+}
+
+function setupMenuToggle(): void {
+    const menuToggle = document.querySelector(".menu-toggle") as HTMLDivElement | null;
+    const navLinks = document.querySelector(".nav-links") as HTMLUListElement | null;
+
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+    }
 }

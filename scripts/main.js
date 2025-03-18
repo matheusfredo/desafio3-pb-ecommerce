@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     setupEmailValidation();
     initializeCarousel(".carousel-track", ".carousel-slide", ".carousel-dots");
     initializeCarousel(".opinions-track", ".opinions-slide", ".opinions-dots");
+    setupMenuToggle();
 });
 function preventAnchorJump() {
     document.querySelectorAll("a").forEach(function (link) {
@@ -51,9 +52,10 @@ function showMessage(container, message, className) {
     }, 3000);
 }
 /**
- * @param trackSelector
- * @param slideSelector
- * @param dotsSelector
+ * Inicializa um carrossel automático
+ * @param trackSelector Seletor do track principal do carrossel
+ * @param slideSelector Seletor de cada slide do carrossel
+ * @param dotsSelector Seletor do container dos pontos indicadores
  */
 function initializeCarousel(trackSelector, slideSelector, dotsSelector) {
     var track = document.querySelector(trackSelector);
@@ -87,4 +89,13 @@ function updateCarousel(track, dotsContainer, totalSlides, currentIndex) {
     dots.forEach(function (dot, index) {
         dot.classList.toggle("active", index === currentIndex);
     });
+}
+function setupMenuToggle() {
+    var menuToggle = document.querySelector(".menu-toggle");
+    var navLinks = document.querySelector(".nav-links");
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener("click", function () {
+            navLinks.classList.toggle("active");
+        });
+    }
 }

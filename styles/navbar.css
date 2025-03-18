@@ -1,50 +1,116 @@
 .navbar {
     display: flex;
     align-items: center;
-    padding: 18px 40px;
+    justify-content: space-between;
+    padding: 12px 20px;
     background-color: var(--bg-light);
     box-shadow: var(--shadow);
     position: fixed;
     width: 100%;
     top: 36px;
     z-index: 1000;
-  }
-  
-  .logo {
-    display: flex;
-    align-items: center;
-    flex: 1;
-  }
-  
-  .logo img {
-    max-height: 50px;
-  }
-  
-  .nav-links {
+    transition: top 0.3s ease-in-out;
+}
+.logo img {
+    max-height: 40px;
+}
+
+.nav-links {
     list-style: none;
     display: flex;
     justify-content: center;
-    flex-grow: 2;
     gap: 30px;
-  }
-  
-  .nav-links li a {
+}
+
+.nav-links li a {
     text-decoration: none;
     color: var(--text-color);
     font-size: 18px;
     font-weight: 600;
     transition: color 0.3s;
-  }
-  
-  .nav-links li a:hover {
+}
+
+.nav-links li a:hover {
     color: var(--secondary-color);
-  }
-  
-  .nav-icons {
+}
+
+.nav-icons {
     display: flex;
     align-items: center;
-    gap: 15px;
-    flex: 1;
-    justify-content: flex-end;
-  }
-  
+    gap: 10px;
+}
+
+.nav-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    z-index: 1100;
+}
+
+.menu-toggle div {
+    width: 28px;
+    height: 3px;
+    background-color: var(--text-color);
+    transition: 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        top: 0px;
+        padding: 10px 16px;
+        height: 64px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-light);
+        box-shadow: var(--shadow);
+        padding: 20px;
+        text-align: center;
+        gap: 20px;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    main {
+        margin-top: 80px;
+    }
+    .cta-button {
+        display: none;
+    }
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.menu-toggle.active div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active div:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active div:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}

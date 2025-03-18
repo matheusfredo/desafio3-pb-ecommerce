@@ -88,24 +88,21 @@
     text-align: center;
 }
 
-.spring-title-wrapper {
+.spring-title-wrapper, .spring-title-wrapper-inverted {
     position: relative;
     width: 100%;
-    height: 80px; 
-    background: linear-gradient(to bottom, #DFEDE8 50%, #F7F2EC 50%);
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+.spring-title-wrapper {
+    background: linear-gradient(to bottom, #DFEDE8 50%, #F7F2EC 50%);
+}
+
 .spring-title-wrapper-inverted {
-    position: relative;
-    width: 100%;
-    height: 80px; 
-    background: linear-gradient(to bottom, #F7F2EC 50%, #DFEDE8 50%); 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: linear-gradient(to bottom, #F7F2EC 50%, #DFEDE8 50%);
 }
 
 .section-title {
@@ -131,40 +128,6 @@
 .success-message {
     background-color: green !important;
 }
-
-    /* ==========================
-       RESPONSIVIDADE
-       ========================== */
-    @media (max-width: 1024px) {
-        .product-grid {
-            flex-wrap: wrap;
-        }
-    
-        .product-card {
-            width: 220px;
-        }
-    }
-    
-    @media (max-width: 768px) {
-        .spring-title {
-            font-size: 28px;
-            padding: 10px 20px;
-        }
-    
-        .product-card {
-            width: 90%;
-            max-width: 300px;
-        }
-    
-        .explore-btn {
-            width: 90%;
-            max-width: 300px;
-        }
-    }
-
-
-   
-
     
 #email-message-container {
     position: fixed;
@@ -194,3 +157,76 @@
     transition: border 0.3s ease;
 }
 
+/* ==========================
+   RESPONSIVIDADE
+   ========================== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .product-grid {
+        flex-wrap: wrap;
+    }
+
+    .product-card {
+        width: 220px;
+    }
+
+    .spring-title {
+        font-size: 26px;
+        padding: 8px 18px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .spring-title {
+        font-size: 22px;
+        padding: 8px 16px;
+        border-radius: 30px;
+    }
+
+    .product-card {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .explore-btn {
+        width: 90%;
+        max-width: 300px;
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .section-title {
+        font-size: 36px;
+    }
+
+    .section-subtitle {
+        font-size: 16px;
+        max-width: 90%;
+    }
+
+    .spring-text {
+        font-size: 22px;
+    }
+
+    .spring-icon {
+        width: 30px;
+        margin-right: 5px;
+    }
+
+    .spring-title-wrapper,
+    .spring-title-wrapper-inverted {
+        height: 60px;
+    }
+    
+    .explore-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cta-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
