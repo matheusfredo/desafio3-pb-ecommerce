@@ -1,0 +1,79 @@
+# 🧸 TeddyShop - Loja de Pelúcias Online
+
+Bem-vindo ao **TeddyShop**, um e-commerce especializado em pelúcias de alta qualidade. Aqui você encontra produtos fofos e encantadores para todas as idades, com opções personalizadas e ofertas especiais.
+
+![logo](assets/icons/logo.svg)
+
+---
+
+## 🎨 **Visão Geral do Projeto**
+
+Este projeto foi desenvolvido com o objetivo de criar uma experiência de compra agradável e intuitiva, oferecendo um design moderno e responsivo, além de um sistema eficiente de gerenciamento de produtos e pedidos.
+Desenvolvido através do programa de bolsas CompassUol.
+
+### 🌟 **FIGMA**
+
+    https://www.figma.com/design/PcsgcpF568uIAuvbCMbDro/Teddy-Shop---Ecommerce---Home-page-(Community)?node-id=0-1&p=f&t=6PAa407xQkFZ6pmo-0
+
+### 🌟 **Principais Recursos**
+
+✅ Catálogo de produtos 🛒  
+✅ Carrinho de compras interativo 🧾  
+✅ Personalização de pelúcias ✨  
+✅ Sistema de ofertas e descontos 💰  
+✅ Newsletter para atualizações 📩  
+
+---
+
+## 📸 **Capturas de Tela**
+
+### 🏠 Página Inicial
+![Home](./assets/images/prints/home.png)
+
+### 🛍️ Catálogo de Produtos
+![Produtos](./assets/images/prints/catalogo.png)
+
+### 🧾 Caracteristicas
+![caracteristicas](./assets/images/prints/caracteristicas.png)
+
+### mobile
+![mobile](./assets/images/prints/mobile.png)
+
+---
+
+## 🔧 **Tecnologias Utilizadas**
+
+O **TeddyShop** foi desenvolvido utilizando as seguintes tecnologias:
+
+- **HTML5** 
+- **CSS3 (Flexbox & Grid)** 
+- **JavaScript (ES6+)** 
+- **TypeScript** 
+
+
+---
+
+##  **Instalação e Configuração**
+
+Para rodar o projeto localmente, siga os passos abaixo:
+
+```bash
+# Clone o repositório
+git clone https://github.com/matheusfredo/desafio3-pb-ecommerce.git
+
+# Entre na pasta do projeto
+cd desafio3-pb-ecommerce
+
+# Instale as dependências
+npm install
+
+
+📜 Licença
+Este projeto está sob a licença MIT. Sinta-se à vontade para utilizá-lo e modificá-lo.
+
+
+👨‍💻 Autor
+Desenvolvido por Matheus Fredo Alves.
+
+📌 LinkedIn
+📌 GitHub
